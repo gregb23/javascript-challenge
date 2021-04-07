@@ -25,18 +25,26 @@ function runFilter () {
     console.log(tableData);
 
     //show requested data
-    var filteredData = tableData.filter(datum.datetime === inputValue);
+    var filteredData = tableData.filter(datum => datum.datetime === inputValue);
     console.log(filteredData);
 
     //update table with data
-    filteredData.forEach((ufoData) => {
+    filteredData.forEach((alienData) => {
         const row = tableBody.append("tr");
-        Object.defineProperties(ufoData).forEach(([key, value]) => {
-            const cell = row.append(td);
+        Object.entries(alienData).forEach(([key, value]) => {
+            const cell = row.append("td");
             cell.text(value);
         });
 
     });
+};
+
+function resetFxn () {
+    document.getElementById("form").reset();
+};
+
+function clearResults () {
+    document.getElementById('tableContents').innerHTML='';
 };
 
 
