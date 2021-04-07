@@ -27,7 +27,17 @@ function runFilter () {
     //show requested data
     var filteredData = tableData.filter(datum.datetime === inputValue);
     console.log(filteredData);
-}
+
+    //update table with data
+    filteredData.forEach((ufoData) => {
+        const row = tableBody.append("tr");
+        Object.defineProperties(ufoData).forEach(([key, value]) => {
+            const cell = row.append(td);
+            cell.text(value);
+        });
+
+    });
+};
 
 
 
