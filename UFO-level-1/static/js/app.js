@@ -14,5 +14,19 @@ const tableBody = d3.select(".table-body");
 button.on("click", runFilter);
 form.on("submit", runFilter);
 
+//write function for form 
+
+function runFilter () {
+    d3.event.preventDefault(); //stops page for refreshing
+    var inputElement = d3.select("#datetime");
+    var inputValue = inputElement.property("value");
+
+    console.log(inputValue);
+    console.log(tableData);
+
+    //show requested data
+    var filteredData = tableData.filter
+}
+
 
 
