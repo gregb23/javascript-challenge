@@ -25,7 +25,8 @@ function runFilter () {
     console.log(tableData);
 
     //show requested data
-    var filteredData = tableData.filter
+    var filteredData = tableData.filter(datum.datetime === inputValue);
+    console.log(filteredData);
 }
 
 
