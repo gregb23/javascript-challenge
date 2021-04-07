@@ -21,6 +21,7 @@ function runFilter () {
     var inputElement = d3.select("#datetime");
     var inputValue = inputElement.property("value");
 
+
     console.log(inputValue);
     console.log(tableData);
 
@@ -47,5 +48,5 @@ function clearResults () {
     document.getElementById('tableContents').innerHTML='';
 };
 
-
+vv
 
